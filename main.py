@@ -63,9 +63,9 @@ def save_images_as_pdf(url, output_pdf):
                         filtered_images.append(image_urls[i])
 
             # Download images and save them to a list
-            print(f'Converting images from the following urls:')
-            for report_url in filtered_images:
-                print(report_url)
+            # print(f'Converting images from the following urls:')
+            # for report_url in filtered_images:
+                # print(report_url)
             images = [requests.get(url).content for url in filtered_images]
 
             # Convert images to PDF
@@ -83,6 +83,6 @@ def save_images_as_pdf(url, output_pdf):
 
 
 # Example usage
-website_url = 'https://readcomicsonline.ru/comic/birds-of-prey-2023/7'
+website_url = 'https://somewebsite.com'
 output_pdf_file = 'mode_dimensions_images.pdf'
 save_images_as_pdf(website_url, output_pdf_file)
